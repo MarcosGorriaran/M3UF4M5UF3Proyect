@@ -35,7 +35,6 @@
             MarineTurtle turtle=new MarineTurtle((int)rnd.NextInt64(MarineTurtle.IDMinLimit,MarineTurtle.IDMaxLimit),(int)rnd.NextInt64(MarineTurtle.ARMinLimit, MarineTurtle.ARMaxLimit));
             WaterBird bird= new WaterBird((int)rnd.NextInt64(WaterBird.IDMinLimit, WaterBird.IDMaxLimit), (int)rnd.NextInt64(WaterBird.ARMinLimit, WaterBird.ARMaxLimit));
             WaterMammal mammal = new WaterMammal((int)rnd.NextInt64(WaterMammal.IDMinLimit, WaterMammal.IDMaxLimit), (int)rnd.NextInt64(WaterMammal.ARMinLimit, WaterMammal.ARMaxLimit));
-            string errorMsg;
             int option=0;
             int gameOption=0;
             int actualGA=0;
