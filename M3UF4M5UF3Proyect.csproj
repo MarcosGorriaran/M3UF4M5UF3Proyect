@@ -7,4 +7,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="ExternalLibraries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ConsoleTable">
+      <HintPath>ExternalLibraries\ConsoleTable.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
