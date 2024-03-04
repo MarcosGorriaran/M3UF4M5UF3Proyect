@@ -1,5 +1,4 @@
-﻿using ConsoleTable;
-namespace CRUMGame
+﻿namespace CRUMGame
 {
     public class CRUMGameDriver
     {

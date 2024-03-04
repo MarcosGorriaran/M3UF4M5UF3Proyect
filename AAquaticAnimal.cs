@@ -62,9 +62,16 @@ namespace CRUMGame
         {
 
         }
-
+        /// <summary>
+        /// This method is responsible of calculating the new afected value using the option the user used to treat an animal as it's changing factor
+        /// </summary>
+        /// <param name="option">The option the user has choosen minus 1</param>
         public abstract void CalcNewAR(int option);
 
+        /// <summary>
+        /// This method will return the rescue information of this object in a table object which can be printed as text using toTableString method
+        /// </summary>
+        /// <returns>A table object so it can be printed later</returns>
         public Table BuildRescueTable()
         {
             Cell[,] tableContent = new Cell[,]
@@ -86,6 +93,10 @@ namespace CRUMGame
             };
             return new Table(tableContent, RescueTableTitle);
         }
+        /// <summary>
+        /// This method will return the animal information of this object in a table object which can be printed as text using toTableString method
+        /// </summary>
+        /// <returns>A table object so it can be printed later</returns>
         public Table BuildInfoTable()
         {
             Cell[,] tableContent = new Cell[,]
