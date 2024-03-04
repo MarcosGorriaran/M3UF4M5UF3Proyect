@@ -19,9 +19,11 @@ namespace CRUMGame
         const string DefLocation = "Somewhere";
         const string DefSpecies = "LeFish";
         const string DefName = "Someone";
+        const string PercentSymbol = "%";
         const float DefWeight = 20.5f;
         const int DefAfectionRate = 0;
         const int DefNRescue = 0;
+        public const int TopPercent = 100;
         public const int IDMinLimit = 0;
         public const int IDMaxLimit = 999;
         public const int ARMinLimit = 0;
@@ -78,7 +80,7 @@ namespace CRUMGame
                     new Cell(StartNRescueSeq+NRescue,false),
                     new Cell(DateRescue,false),
                     new Cell(Family,false),
-                    new Cell(AfectionRate+"",false),
+                    new Cell(AfectionRate+PercentSymbol,false),
                     new Cell(Location,false),
                 }
             };
@@ -139,9 +141,12 @@ namespace CRUMGame
             get { return afectionRate; }
             set 
             {
-                if(value < ARMinLimit || value > ARMaxLimit)
+                if (value > TopPercent)
                 {
-                    throw new Exception();
+                    value = TopPercent;
+                }else if (value < 0)
+                {
+                    value = 0;
                 }
 
                 afectionRate = value; 

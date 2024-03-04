@@ -18,7 +18,7 @@
         public override void CalcNewAR(int option)
         {
             int xValue = option == (int)RescueType.treat ? ValueOfX : 0;
-            AfectionRate = Convert.ToInt32(AfectionRate * (Math.Pow(AfectionRate,2)+xValue));
+            AfectionRate = Convert.ToInt32(AfectionRate - (Math.Pow(AfectionRate,2)+xValue));
         }
     }
 }

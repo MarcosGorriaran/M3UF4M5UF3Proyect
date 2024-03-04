@@ -17,7 +17,7 @@
         }
         public override void CalcNewAR(int option)
         {
-            AfectionRate = AfectionRate * ((AfectionRate - 2)*(2 * AfectionRate + 3)) - ValueOfX;
+            AfectionRate = AfectionRate - ((AfectionRate - 2)*(2 * AfectionRate + 3)) - ValueOfX;
         }
     }
 }
